@@ -1,0 +1,84 @@
+# Kuis Formatif Pertemuan 12
+## File Input-Output dan Penanganan Error Dasar
+
+**Mata Kuliah:** Algoritma dan Pemrograman  
+**Program Studi:** S1 Pendidikan Matematika  
+**Nama:** Aulia Nurrizqi
+**NIM:** 2225250160
+**Kelas:** 3A
+
+---
+
+### 1. Apa manfaat menggunakan `with` saat membuka file?
+
+**Jawaban:**
+
+Penggunaan `with` bermanfaat untuk menutup file secara otomatis setelah proses membaca atau menulis selesai. Dengan demikian, pengelolaan file menjadi lebih aman dan efisien.
+
+### 2. Apa perbedaan mode `r`, `w`, dan `a`?
+
+**Jawaban:**
+
+- Mode `r` (*read*) digunakan untuk membaca isi file yang sudah ada.
+- Mode `w` (*write*) digunakan untuk menulis file dari awal. Jika file sudah berisi data, isi lama akan ditimpa.
+- Mode `a` (*append*) digunakan untuk menambahkan data di akhir file tanpa menghapus isi sebelumnya.
+
+### 3. Apa risiko menggunakan mode `w` pada file yang sudah berisi data?
+
+**Jawaban:**
+
+Risiko menggunakan mode `w` adalah isi lama file akan terhapus atau tertimpa ketika program menulis data baru. Oleh karena itu, mode ini harus digunakan dengan hati-hati.
+
+### 4. Apa fungsi `encoding="utf-8"`?
+
+**Jawaban:**
+
+`encoding="utf-8"` digunakan untuk menentukan pengodean karakter saat membaca atau menulis file agar teks tersimpan dan terbaca secara konsisten, termasuk karakter khusus.
+
+### 5. Apa perbedaan `read()`, `readline()`, dan iterasi `for` pada file?
+
+**Jawaban:**
+
+- `read()` digunakan untuk membaca seluruh isi file sebagai satu string.
+- `readline()` digunakan untuk membaca satu baris dari file.
+- Iterasi `for` digunakan untuk membaca dan memproses file baris demi baris.
+
+### 6. Mengapa `strip()` sering digunakan setelah membaca baris?
+
+**Jawaban:**
+
+Metode `strip()` digunakan untuk menghapus spasi atau karakter whitespace di awal dan akhir teks, termasuk karakter pindah baris (`\n`). Hal ini memudahkan proses pemisahan dan pengolahan data.
+
+### 7. Kapan `FileNotFoundError` dapat terjadi?
+
+**Jawaban:**
+
+`FileNotFoundError` terjadi ketika program mencoba membuka file yang tidak ditemukan pada lokasi atau path yang ditentukan. Error ini dapat ditangani menggunakan `try-except` agar program menampilkan pesan yang jelas dan tidak berhenti secara tiba-tiba.
+
+### 8. Kapan `ValueError` dapat terjadi pada pemrosesan file nilai?
+
+**Jawaban:**
+
+`ValueError` dapat terjadi ketika program mencoba mengonversi teks yang bukan angka menjadi tipe numerik, misalnya `float("abc")`. Error ini juga dapat terjadi ketika format data tidak sesuai, seperti jumlah bagian data yang dipisahkan dengan koma tidak sesuai harapan.
+
+### 9. Mengapa exception sebaiknya ditangani secara spesifik?
+
+**Jawaban:**
+
+Exception sebaiknya ditangani secara spesifik agar program dapat memberikan respons sesuai penyebab kesalahan. Contohnya, `FileNotFoundError` untuk file yang tidak ditemukan dan `ValueError` untuk data yang tidak valid. Dengan demikian, kesalahan lain tidak tersembunyi dan proses debugging menjadi lebih mudah.
+
+### 10. Perintah apa yang mengirim commit lokal ke GitHub?
+
+**Jawaban:**
+
+Perintah yang digunakan adalah:
+
+```bash
+git push
+```
+
+Perintah tersebut mengirim commit dari repositori lokal ke repositori jarak jauh di GitHub. Jika remote dan branch belum dikonfigurasi untuk push pertama kali, gunakan:
+
+```bash
+git push -u origin main
+```
